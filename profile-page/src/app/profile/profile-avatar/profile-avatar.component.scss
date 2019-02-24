@@ -1,0 +1,15 @@
+.container-fluid {
+  border-bottom: 1px solid #fff;
+  width: 100%;
+
+  .profile{
+    padding-top: 1em;
+  }
+
+}
+
+.profile-picture>img{
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  border: 2px  #fff;
+}

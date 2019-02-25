@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProfileSkillsComponent implements OnInit {
 
   @Input() skillsData: any;
+  @Input() title: any;
+
   constructor() { }
 
   ngOnInit() {

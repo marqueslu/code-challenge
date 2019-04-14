@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from "@angular/core";
 export class ProfileExperienceComponent implements OnInit {
 
   @Input() experienceData: any;
+  @Input() title: any;
 
   constructor() {}
 

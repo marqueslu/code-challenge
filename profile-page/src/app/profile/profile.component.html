@@ -11,12 +11,20 @@
     </div>
     <div class="main-content col-md-8">
       <div class="body-content">
+        <!-- <app-profile-knowledge
+          [experienceData]="profileExperience"
+        ></app-profile-knowledge>
+        <app-profile-knowledge
+          [educationData]="profileEducation"
+        ></app-profile-knowledge> -->
         <app-profile-experience
           [experienceData]="profileExperience"
+          [title]="workTitle"
         ></app-profile-experience>
-        <app-profile-education
-          [educationData]="profileEducation"
-        ></app-profile-education>
+        <app-profile-experience
+          [experienceData]="profileEducation"
+          [title]="educationTitle"
+        ></app-profile-experience>
       </div>
     </div>
   </div>

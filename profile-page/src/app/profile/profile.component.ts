@@ -15,6 +15,9 @@ export class ProfileComponent implements OnInit {
   private profileExperience: any = [];
   private profileEducation: any = [];
 
+  private workTitle: string = "WORK EXPERIENCE";
+  private educationTitle: string = "EDUCATION";
+
   constructor(private service: ProfileService) {}
 
   ngOnInit() {
@@ -42,9 +45,6 @@ export class ProfileComponent implements OnInit {
 
       this.profileExperience = this.profile.profile.experience;
       this.profileEducation = this.profile.profile.education;
-
-      console.log(this.profileSkills);
-
     });
 
   }

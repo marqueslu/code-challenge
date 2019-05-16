@@ -1,6 +1,11 @@
 <div class="container-fluid">
-  <div class="profile-picture" id="avatar-picture">
-    <img src="../assets/pictures-profile/avatar-dev.png" />
+  <div class="profile-picture rotate-clockwise">
+    <div class="profile-picture--content" id="avatar-picture">
+      <div class="profile-picture--content-img rotate-counterclockwise">
+        <!-- <img src="../assets/pictures-profile/avatar-dev.png" /> -->
+        <p class="profile-picture--text">Your Image</p>
+      </div>
+    </div>
   </div>
   <div class="profile">
     <h1 [innerHTML]="">{{ avatarData.name }}</h1>

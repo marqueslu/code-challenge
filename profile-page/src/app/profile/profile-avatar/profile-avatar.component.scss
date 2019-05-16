@@ -1,3 +1,15 @@
+$profile-picture--size: 8.5rem;
+$profile-picture--contrast-color: #fff;
+
+@mixin rotate-45deg($orientation) {
+  @if $orientation == '+' {
+    transform: rotate(45deg);
+  } @else {
+    transform: rotate(-45deg);
+  }
+  
+}
+
 .container-fluid {
   border-bottom: 1px solid #fff;
   width: 100%;
@@ -8,8 +20,41 @@
 
 }
 
-.profile-picture>img{
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  border: 2px  #fff;
+.profile-picture {
+  margin: 3em;
+  background-color: transparent;
+  border: 1px solid $profile-picture--contrast-color;
+  display: inline-block;
+  height: $profile-picture--size;
+  padding: 5px;
+  width: $profile-picture--size;
+
+  &--content {
+    background-color: $profile-picture--contrast-color;
+    height: 100%;
+    width: 100%;
+    &-img {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &--text {
+    color: #000;
+    font-weight: 900;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding: 0.5rem;
+  }
+}
+
+.rotate-clockwise {
+  @include rotate-45deg('+');
+}
+
+.rotate-counterclockwise {
+  @include rotate-45deg('-');
 }
